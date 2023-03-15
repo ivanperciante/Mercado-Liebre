@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ("./partials/head") %>
+<body>
+    <%- include ("./partials/header") %>
+
+    <main>
+        <div class="titulo">
+            <h2>Basado en tu última visita</h2>
+        </div>
+
+        <section class="row">
+            
+            <% products.forEach(product => { %>
+
+            <article class="product__container">
+                <a href="/products/detail/<%= product.id %>">
+                    <img src="/images/<%= product.img %>">
+                    <div class="product__info">
+                        <i class="fa-solid fa-truck ship__icon"></i>
+                        <p class="product__price"><%= product.price %></p>
+                        <p class="product__discount"><%= product.discount %></p>
+                        <p class="product__description"><%= product.name %></p>
+                    </div>
+                </a>
+            </article>
+            <% }) %>
+
+        </section>
+
+        <div class="titulo">
+            <h2>Ofertas</h2>
+        </div>
+
+        <section class="row">
+            
+            <% for(product of products) { %>
+                <article class="product__container">
+                    <a href="/products/detail/<%= product.id %>">
+                        <img src="/images/<%= product.img %>">
+                        <div class="product__info">
+                            <i class="fa-solid fa-truck ship__icon"></i>
+                            <p class="product__price"><%= product.price %></p>
+                            <p class="product__discount"><%= product.discount %></p>
+                            <p class="product__description"><%= product.name %></p>
+                        </div>
+                    </a>
+                </article>
+                <% } %>
+
+        </section>
+    </main>
+
+    <%- include ("./partials/footer") %>
+</body>
+</html>

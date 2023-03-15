@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ("./partials/head") %>
+<body>
+    <%- include ("./partials/headerRegister") %>
+    
+    <main>
+            <div class="form__container">
+                <form>
+                    <label>Nombre</label>
+                    <input type="text">
+
+                    <label>Nombre de usuario</label>
+                    <input type="text">
+
+                    <label>Fecha de nacimiento</label>
+                    <input type="date">
+
+                    <label>Domicilio</label>
+                    <input type="text">
+
+                    <label>Perfil del usuario</label>
+                    <div class="radio__container">
+                        <label><input type="radio">Comprador</label>
+                        <label><input type="radio">Vendedor</label>
+                    </div>
+                    
+                    <label>Categorias</label>
+                    <div class="checkbox__container">
+                        <label><input type="checkbox">Electro</label>
+                        <label><input type="checkbox">Moda</label>
+                        <label><input type="checkbox">Hogar</label>
+                        <label><input type="checkbox">Jugueteria</label>
+                        <label><input type="checkbox">Vida Sana</label>
+                    </div>
+
+                    <label>Foto</label>
+                    <input type="file" class="pic__input">
+
+                    <label>Contraseña</label>
+                    <input type="password">
+
+                    <label>Confirmar contraseña</label>
+                    <input type="password">
+
+                    <div class="button__container">
+                        <input type="button" value="Borrar" class="send__button">
+                        <input type="button" value="Enviar" class="send__button">
+                    </div>
+                </form>
+            </div>
+    </main>
+
+    <%- include ("./partials/footer") %>
+</body>
+</html>
